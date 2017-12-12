@@ -1,0 +1,66 @@
+1) Populacao inicial
+	Definir quantos individuos
+
+	Io (4)
+	I1 (15)
+	I2 ...
+
+2) Avaliacao
+	Fitness
+	F0 = f(I0)
+	F1 ...
+
+3) Selecao
+	Mf = F0, Mi = 0
+	For i to n
+		if Fi > Mf
+			Mf = FI
+			Mi = i
+
+	Sempre guardar o melhor individuo de todos os tempos
+
+4) Crossover
+	for 0 to n
+		Ii = (I + Im(melhor de todos))/2
+
+5) Mutacao
+	Ii = Ii +/- Tm (Taxa de mutacao)
+
+	Cuidado para nao mutar o melhor de todos
+
+6) Rearranjar a populacao
+
+** Predacao
+	Periodo de 10 geracoes
+	Matar o pior e troca por Rand
+
+** TxMutVariavel
+	Diminuir p melhorar max local. A cada 5 geracoes em q n houve mudanca no Melhor fitness dividir txMut por 10,
+se houver mudanca voltar txMut inicial, ou mantem
+	Aumentar p aumentar diversidade, procurar melhores max local. A cada 5 geracoes em q n houve mudanca no Melhor fitness 
+multiplicar txMut por 10, se houver mudanca voltar txMut inicial, ou mantem
+
+
+     Fitness
+	^
+	|                            
+	|                        **********
+	|                       *
+	|        *************** 
+	|     ***
+	|   *
+	|
+	| *
+	|
+	|
+	|
+	|*
+	|
+	|
+	------------------------x---------------> N geracao
+				|-> Salto evolutivo
+
+
+** Ruido
+	Best -> Maior Media ((ft, ft-1, ..., ft-5)/6)
+	     -> Crossover com todos, menos com quem tem Ft maior que o dele
