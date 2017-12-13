@@ -64,3 +64,6 @@ multiplicar txMut por 10, se houver mudanca voltar txMut inicial, ou mantem
 ** Ruido
 	Best -> Maior Media ((ft, ft-1, ..., ft-5)/6)
 	     -> Crossover com todos, menos com quem tem Ft maior que o dele
+
+Individuo Artificial->
+	fazer um individuo com os genes com mais frequencia
